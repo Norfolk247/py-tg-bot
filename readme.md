@@ -13,7 +13,7 @@
         DATABASE_USER=пользователь бд, по дефолту postgresql
         DATABASE_PASSWORD=пароль бд
         DATABASE_NAME=имя базы данных
-    config/config.ini
+    bot/config/config.ini
         [urls]
             channelInvite=название канала спонсора
             botInviteUrl=ссылка на бота нужна для реферальных ссылок, чтобы заканчивалась на ?start=
