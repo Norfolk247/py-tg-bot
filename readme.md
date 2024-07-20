@@ -14,10 +14,11 @@
         DATABASE_PASSWORD=пароль бд
         DATABASE_NAME=имя базы данных
     config/config.ini
-        channelInvite=название канала спонсора
-        botInviteUrl=ссылка на бота нужна для реферальных ссылок, чтобы заканчивалась на ?start=
-    config/banks.json
-        названия банков для вывода
+        [urls]
+            channelInvite=название канала спонсора
+            botInviteUrl=ссылка на бота нужна для реферальных ссылок, чтобы заканчивалась на ?start=
+        [ids]
+            sponsorGroupChatId=id канала спонсора
 ## Настройка в botfather
     API TOKEN
     edit bot/
