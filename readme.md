@@ -13,6 +13,10 @@
         DATABASE_USER=пользователь бд, по дефолту postgresql
         DATABASE_PASSWORD=пароль бд
         DATABASE_NAME=имя базы данных
+    bot/config/banks.json
+        [
+            название банков
+        ]
     bot/config/config.ini
         [urls]
             channelInvite=название канала спонсора

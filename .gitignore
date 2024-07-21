@@ -1,0 +1,5 @@
+/.idea
+**/.env
+**/.log
+bot/config/banks.json
+bot/config/config.ini
