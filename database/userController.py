@@ -2,6 +2,7 @@ import string
 import random
 from time import time
 from configparser import ConfigParser
+from psycopg2 import connect
 
 config = ConfigParser()
 config.read('bot/config/config.ini')
@@ -120,3 +121,9 @@ class userController:
         cursor.execute("UPDATE referrals SET joined = true WHERE userid = %s", (userId,))
         self._connection.commit()
         return False
+
+    def getAllUsersIds(self):
+        cursor = self._connection.cursor()
+        cursor.execute("SELECT userid FROM userdata")
+        result = cursor.fetchall()
+        return [row[0] for row in result]
