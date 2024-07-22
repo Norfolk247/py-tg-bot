@@ -1,12 +1,14 @@
 from bot.messages.descriptionMessages import descriptions
 from bot.messages.menusMessages import menus
 from bot.messages.callbacksMessages import callbacks
+from bot.messages.adminMessages import admin
 from bot.config.calcs import HashPerClick, nextLevelCost, exchangeRateHashToEGP, exchangeRateEGPToHash
 
 
 class messages:
     def __init__(self):
         self.descriptions = descriptions()
+        self.admin = admin()
         self.menus = menus()
         self.callbacks = callbacks()
 
