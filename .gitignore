@@ -1,5 +1,5 @@
 /.idea
 **/.env
-**/.log
-bot/config/banks.json
+**.log
+bot/config/*.json
 bot/config/config.ini
