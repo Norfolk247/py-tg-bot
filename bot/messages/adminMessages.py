@@ -6,11 +6,13 @@ class descriptions:
         self.send = 'Отправить'
         self.cancel = 'Отменить'
         self.setSpamMessage = 'Напишите текст для сообщения рассылки'
+        self.wrongMessageType = 'Неизвестный тип файла/файлов выберите другое сообщение'
 class commands:
     def __init__(self):
         self.setSpam = 'Установить сообщение для рассылки'
         self.sendSpam = 'Отправить рассылку'
         self.quitAdmin = 'Выйти из админ панели'
+
 class admin:
     def __init__(self):
         self.descriptions = descriptions()
