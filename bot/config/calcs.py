@@ -1,5 +1,5 @@
 def nextLevelCost(level):
-    return round(80000 * 1.2 ** (level - 1))
+    return round(2500 * 1.2 ** (level - 1))
 
 
 def HashPerClick(level):
