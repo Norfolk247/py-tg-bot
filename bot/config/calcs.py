@@ -11,4 +11,4 @@ def exchangeRateHashToEGP(hashValue):
 
 
 def exchangeRateEGPToHash(egpValue):
-    return egpValue * 200
+    return egpValue * 400
