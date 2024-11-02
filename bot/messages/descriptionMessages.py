@@ -6,40 +6,41 @@ channelInvite = config.get('urls', 'channelInvite')
 
 class descriptions:
     def __init__(self):
-        self.selectMenuItem = 'حدد عنصر القائمة 📋'
+        self.selectMenuItem = 'Seleccione un elemento de menú 👇'
         self.maxClicksToday = 'الحد الأقصى المستخرج اليوم'
-        self.withdrawCash = 'سحب المال'
-        self.successfulLevelUp = 'لقد وصلت إلى مستوى أعلى'
-        self.connectWithSponsor = f'تصل بالراعي الخاص بك للانتقال إلى المستوى التالي. {channelInvite}'
-        self.followLink = 'اتبع الرابط 📲'
+        self.withdrawCash = 'retirar dinero'
+        self.successfulLevelUp = 'Has alcanzado un nivel superior'
+        self.connectWithSponsor = f'Conéctate con tu patrocinador para pasar al siguiente nivel {channelInvite}'
+        self.followLink = 'Ir al canal 📲'
         self.toEarnGiftFollowSponsorChannel = """
-        ❗️هل تريد 1200 EGP للاشتراك في القناة؟!❗️
+        ❗️OBTENGA 1200 PESOS POR SUSCRIPCIÓN AL CANAL❗️
 
-👉 اشترك في القناة، ثم عد إلى هنا وانقر على "احصل على المكافأة". سوف تتلقى 1200 EGP.
+💫Debes suscribirte al canal del patrocinador, ver 25 publicaciones que aparezcan después de la suscripción, y luego puedes regresar aquí por tu recompensa, haciendo clic en el botón "Obtener recompensa". Y recibirás 1200 pesos!
+
+⚠️Ten en cuenta: si te das de baja del canal del patrocinador, no se realizará el pago
         """
-        self.printNumberOr0ToCancel = 'أدخل رقمًا صالحًا أو 0 للإلغاء'
-        self.printEGPCount = 'أدخل رقم EGP للدفع'
-        self.notEnoughHashToTrade = 'لا يوجد ما يكفي من التجزئة للتبادل'
-        self.notEnoughEGP = 'لا يوجد ما يكفي من EGP للسحب'
-        self.chooseBank = 'حدد البنك'
-        self.bankNotFound = 'لا يوجد مثل هذا البنك'
-        self.EGPReceivingNotAvailable = 'سحب EGP متاح فقط من مستوى التعدين 3'
+        self.printNumberOr0ToCancel = 'Ingrese un número válido o 0 para cancelar'
+        self.printEGPCount = 'Ingresa la cantidad de USD a retirar'
+        self.notEnoughHashToTrade = 'No hay suficiente hash para intercambiar'
+        self.notEnoughEGP = 'Fondos insuficientes!'
+        self.chooseBank = 'Retiros (Pagos)'
+        self.bankNotFound = 'no existe tal banco'
+        self.EGPReceivingNotAvailable = 'El retiro de USD solo está disponible desde el nivel de minería 3'
         self.faq = """
-١. ما هو هذا البوت؟ باستخدام هذا البوت على Telegram، يمكنك كسب EGP
-2. كيف يعمل؟ كل نقرة تحصل على قوة معينة على خوادمنا، مما يسمح لك بتعدين العملات المشفرة
-3. كيف تبدأ في الكسب؟ اختر عنصر القائمة كسب الهاش 💰 واضغط ابدأ التعدين ⛏️ لبدء الكسب. لكل نقرة ستحصل على كمية معينة من hash، والتي يمكنك استبدالها بـ EGP وسحبها
-4. كيف تستبدل hash بـ EGP؟ اضغط على زر تبادل الهاش المكتسب 🔄، ثم أدخل كمية EGP
-5. كيف تسحب الأموال؟ السحب متاح من المستوى 3 للتعدين. لسحب الأموال، يجب عليك اختيار عنصر القائمة الحصول على الدفع 💵
-6. لماذا يجب رفع المستوى؟ كل مستوى يزيد من كمية hash التي يتم تعدينها لكل نقرة. لرفع المستوى، تحتاج إلى جمع كمية معينة من hash
-7. كيف تكسب أكثر؟ للكسب، قمنا بإدخال نظام الإحالة والمهام من الرعاة
-8. كيف تكسب في نظام الإحالة؟ من عنصر القائمة، تحتاج إلى الحصول على رابط الإحالة وإرساله إلى أصدقائك للتسجيل
-9. كم من الوقت يستغرق الدفع؟ حوالي 3-7 أيام عمل
-10. ما هي مهام الراعي؟ لكي نتمكن من الدفع للجميع على بوتنا، نقوم بالإعلان عن أشخاص وشركات مختلفة. لاستخدام إعلاناتنا بنشاط، ندفع لك أيضًا مقابل ذلك. انتقل إلى القائمة 💸 بمال أكثر وتعرف على القواعد المتعلقة بطلبات الراعي
-11. من أين نحصل على الأموال لدفع المستخدمين؟ اليوم، العملات المشفرة تجلب أموالاً ضخمة. لهذا السبب ابتكرنا هذه الطريقة لتعدين العملات المشفرة، حتى يحصل جميع المشاركين على أرباح. بالإضافة إلى ذلك، نقدم إعلانات لمدونين وشركات مختلفة مرتبطة ارتباطًا وثيقًا بالعملات المشفرة.
-"""
-        self.printPromo = 'أدخل الرمز الترويجي'
-        self.wrongPromo = 'رمز ترويجي غير صالح'
-        self.commandUnknown = 'فريق غير معروف. اكتب /start'
-        self.notSubscribed = '❌ أنت غير مشترك في هذه القناة ❌'
-        self.giftSend = 'تمت إضافة 1200 EGP بنجاح إلى ملفك الشخصي'
-        self.bonusAlreadyClaimed = 'لقد تم استلام المكافأة بالفعل'
+1. ¿Qué es este robot? Usando este bot en Telegram, puedes ganar USD
+2. ¿Cómo funciona? Cada clic te otorga cierta potencia en nuestros servidores, permitiéndote minar criptomonedas.
+3. ¿Cómo empezar a ganar dinero? Seleccione el elemento del menú Ganar Hash 💰 y presione Iniciar minería ⛏️ para comenzar a ganar. Por cada clic obtendrás una determinada cantidad de hash, que podrás cambiar por USD y retirar
+4. ¿Cómo cambiar hash a USD? Haga clic en el botón Intercambiar Hash Ganado 🔄, luego ingrese la cantidad de USD
+5. ¿Cómo retirar dinero? El retiro está disponible desde el nivel de minería 3. Para retirar fondos, debe seleccionar el elemento del menú Obtener pago 💵
+6. ¿Por qué deberíamos subir el listón? Cada nivel aumenta la cantidad de hash extraído por clic. Para subir de nivel, debes recolectar una cierta cantidad de hachís.
+7. ¿Cómo ganar más? Para ganar, hemos introducido un sistema de referencias y tareas de patrocinadores.
+8. ¿Cómo ganar dinero en el sistema de referencias? Desde el elemento del menú, debe obtener el enlace de referencia y enviárselo a sus amigos para que se registren.
+9. ¿Cuánto tiempo se tarda en pagar? Alrededor de 3-7 días hábiles
+10. ¿Cuáles son los deberes de un pastor? Para poder pagar a todos los usuarios de nuestro bot, publicitamos diferentes personas y empresas. Por utilizar activamente nuestros anuncios, también le pagamos por ello. Ve a la lista 💸 con más dinero y conoce las reglas respecto a solicitudes de patrocinadores
+11. ¿De dónde obtenemos dinero para los usuarios que pagan? Hoy en día, las criptomonedas generan enormes cantidades de dinero. Por eso creamos esta forma de minar criptomonedas, para que todos los participantes obtengan ganancias. Además, proporcionamos publicidad de diferentes blogueros y empresas estrechamente relacionadas con las criptomonedas."""
+        self.printPromo = 'Seleccione un elemento de menú 👇'
+        self.wrongPromo = 'Código de promoción no válido'
+        self.commandUnknown = 'Lo siento, pero no eres un administrador /start'
+        self.notSubscribed = '❌ no estás suscrito al canal ❌'
+        self.giftSend = '1200 USD se han agregado exitosamente a su perfil'
+        self.bonusAlreadyClaimed = 'La recompensa ya ha sido recibida'

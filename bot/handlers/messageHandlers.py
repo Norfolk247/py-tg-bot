@@ -71,8 +71,10 @@ class messageHandler:
                                reply_markup=reply_markup)
 
     def referral(self, message):
-        self._bot.send_message(message.chat.id,
-                               self._messages.referralMessage(self._connection.userController.generateReferral(message.from_user.id)))
+        self._bot.send_message(
+            message.chat.id,
+            self._messages.referralMessage(self._connection.userController.generateReferral(message.from_user.id))
+        )
 
     def coinTrade(self, message, messageHandler):
         userId, _, userHash, egp, _, _, _ = self._connection.userController.getUser(message.from_user.id)

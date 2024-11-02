@@ -14,67 +14,70 @@ class messages:
 
     def clickerReplyMessage(self, currentClicks, maximumClicks, level, userHash):
         return f"""
-        تم التعدين اليوم: {currentClicks}/{maximumClicks} ⛏️
+📆 Hoy: {currentClicks}/{maximumClicks}
 
-        التقدم: {round(currentClicks / maximumClicks * 100)}% 📊
+♻️ Progreso: {round(currentClicks / maximumClicks * 100)}%
 
-        الهاش لكل نقرة: {HashPerClick(level)} 🖱️
-        المستوى: {level} 📈
-        رصيد الهاش: {userHash} 💰
+⚖️ Hash por clic: {HashPerClick(level)}
+📶 Nivel minero: {level}
+💰 Saldo HASH: {userHash}
         """
 
     def coinTradeReplyMessage(self, userHash):
-        return f"""أدخل رقم EGP أو 0 للإلغاء 👇
-💰 رصيدك هو {userHash} تجزئة
-🔒 يمكنك سحب {exchangeRateHashToEGP(userHash)} EGP
+        return f"""Introduce la cantidad de HASH que quieres cambiar por bitcoin 👇
+💰 Tu saldo: {userHash} HASH
+🔒 Máximo disponible: {exchangeRateHashToEGP(userHash)} USD
 
-🔄 سعر الصرف {exchangeRateEGPToHash(1)} HASH = 1 EGP
+🔄 Tarifa: {exchangeRateEGPToHash(1)} HASH = 1 USD
         """
 
     def nextLevelCost(self, level):
-        return f'المستوى الحالي {level}. تكلفة رفع المستوى {nextLevelCost(level)}'
+        return f'''📶 Nivel minero {level}. 
+🆙 El costo para pasar al siguiente nivel es de {nextLevelCost(level)} hashes'''
 
     def notEnoughHashToLevelUp(self, hashDiff):
-        return f'ليس هناك ما يكفي من التجزئة، بحاجة إلى {hashDiff} أكثر'
+        return f'No hay suficiente hash, necesito más {hashDiff}'
 
     def referralMessage(self, referralLink):
         return f"""
-        💳 احصل على مكافأة مقابل دعوة الأصدقاء 👇
-🔗 أرسل الرابط إلى صديق - {referralLink}
+👥 Dinero para amigo
+💳  Obtenga bonos para amigos invitados 👇
+🔗 Enviar enlace a un amigo - {referralLink} 
 
-✅ تحصل على 1200 EGP لكل صديق تقوم بدعوته.
+✅ 15 USD obtienes por cada amigo invitado
         """
 
     def successfulAddedCoins(self, coinsCount):
-        return f'تم إضافة {coinsCount} EGP إلى ملفك الشخصي'
+        return f'{coinsCount} USD se ha añadido a tu perfil'
 
     def userLadderReplyMessage(self, place):
         return f"""
-        📣 أنت اليوم في مكان {place + 8316} 🏆
+📣 Hoy estás en {place + 8316} lugar 🏆
 
-🎁 للحصول على الجائزة يجب أن تكون من بين أفضل ثلاثة لاعبين حسب رصيد حسابك 🎁.
+🎁 Para recibir una recompensa, debes estar entre los 3 primeros jugadores por saldo 🎁
 
-أعلى 🥇
-الرصيد المطلوب : 15341 💶
-الأجر : 680 💶
-
-أعلى 🥈
-الرصيد المطلوب : 12270 💶
-الجائزة : 300 💶
-
-أعلى 🥉
-الرصيد المطلوب : 10442 💶
-الجائزة : 150 💶
+------------------
+Top 🥇
+Necesita saldo: 6095 USD
+Recompensa: 35 USD
+------------------ 
+Principal 🥈
+Necesita saldo: 4437 USD
+Recompensa: 10 USD
+------------------
+Superior 🥉
+Necesita equilibrio: 4115 USD
+Recompensa: 10 USD
 """
 
     def profileReplyMessage(self, username, egp, userHash, level):
         return f"""
-        👤 ملفي الشخصي:
+👤 Mi perfil:
 
-🗂اسم المستخدم: {username}
+🗂Nombre de usuario: {username}
 
-💶 رصيد EGP: {egp}
+USD Saldo USD: {egp}
 
-💰هاش - الرصيد: {userHash}
-📶 مستوى الغنائم: {level}
+💰HASH - saldo: {userHash}
+📶 Nivel minero: {level}
         """
