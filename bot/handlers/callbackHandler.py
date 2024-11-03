@@ -42,16 +42,19 @@ class callbackHandler:
             return
         reply_markup = InlineKeyboardMarkup(row_width=1)
         reply_markup.add(
-            InlineKeyboardButton(self._messages.descriptions.withdrawCash, url=channelInvite)
+            InlineKeyboardButton(self._messages.descriptions.followLink, url=channelInvite)
         )
-        self._bot.send_message(call.message.chat.id, self._messages.descriptions.maxClicksToday)
+        self._bot.send_message(call.message.chat.id, self._messages.descriptions.maxClicksToday,reply_markup=reply_markup)
 
     def levelUp(self, call):
         userId, level, userHash, _, _, _, update = self._connection.userController.getUser(call.from_user.id)
         if level == 2:
+            reply = InlineKeyboardMarkup()
+            reply.add(InlineKeyboardButton(self._messages.descriptions.followLink,url=channelInvite))
             self._bot.send_message(
                 call.message.chat.id,
-                self._messages.descriptions.connectWithSponsor
+                self._messages.descriptions.connectWithSponsor,
+                reply_markup=reply
             )
             return
         if userHash >= nextLevelCost(level):

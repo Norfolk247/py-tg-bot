@@ -7,10 +7,12 @@ channelInvite = config.get('urls', 'channelInvite')
 class descriptions:
     def __init__(self):
         self.selectMenuItem = 'Seleccione un elemento de menú 👇'
-        self.maxClicksToday = 'الحد الأقصى المستخرج اليوم'
+        self.maxClicksToday = '''Máximo extraído hoy
+
+Suscríbete y obtén 100 USD'''
         self.withdrawCash = 'retirar dinero'
         self.successfulLevelUp = 'Has alcanzado un nivel superior'
-        self.connectWithSponsor = f'Conéctate con tu patrocinador para pasar al siguiente nivel {channelInvite}'
+        self.connectWithSponsor = f'Empieza a ganar'
         self.followLink = 'Ir al canal 📲'
         self.toEarnGiftFollowSponsorChannel = """
         ❗️OBTENGA 1200 PESOS POR SUSCRIPCIÓN AL CANAL❗️
