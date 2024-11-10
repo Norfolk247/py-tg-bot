@@ -2,7 +2,6 @@ import string
 import random
 from time import time
 from configparser import ConfigParser
-from psycopg2 import connect
 
 config = ConfigParser()
 config.read('bot/config/config.ini')
@@ -127,3 +126,9 @@ class userController:
         cursor.execute("SELECT userid FROM userdata")
         result = cursor.fetchall()
         return [row[0] for row in result]
+
+    def countUsers(self):
+        cursor = self._connection.cursor()
+        cursor.execute('SELECT count(1) FROM userdata')
+        result = cursor.fetchone()
+        return result[0]

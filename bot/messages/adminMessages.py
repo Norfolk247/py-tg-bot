@@ -11,6 +11,7 @@ class commands:
     def __init__(self):
         self.setSpam = 'Установить сообщение для рассылки'
         self.sendSpam = 'Отправить рассылку'
+        self.countUsers = 'Количество людей в боте'
         self.quitAdmin = 'Выйти из админ панели'
 
 class admin:
