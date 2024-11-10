@@ -54,6 +54,7 @@ class bot:
             replyMarkup = ReplyKeyboardMarkup(resize_keyboard=True)
             replyMarkup.add(KeyboardButton(self._messages.admin.commands.setSpam))
             replyMarkup.add(KeyboardButton(self._messages.admin.commands.sendSpam))
+            replyMarkup.add(KeyboardButton(self._messages.admin.commands.countUsers))
             replyMarkup.add(KeyboardButton(self._messages.admin.commands.quitAdmin))
 
             self._botInstance.send_message(message.chat.id, self._messages.admin.descriptions.selectCommand,
@@ -67,6 +68,8 @@ class bot:
                     self._handlers.adminMessages.setSpam(nextMessage, sendAdminKeyboardAndRegisterNextCommand)
                 case self._messages.admin.commands.sendSpam:
                     self._handlers.adminMessages.sendSpam(nextMessage, sendAdminKeyboardAndRegisterNextCommand)
+                case self._messages.admin.commands.countUsers:
+                    self._handlers.adminMessages.countUsers(nextMessage, sendAdminKeyboardAndRegisterNextCommand)
                 case self._messages.admin.commands.quitAdmin:
                     return self._sendStartMessage(nextMessage)
                 case _:

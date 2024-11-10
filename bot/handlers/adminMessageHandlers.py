@@ -92,3 +92,8 @@ class adminMessageHandler:
             afterHandler(nextMessage)
 
         self._bot.register_next_step_handler(message, setSpamMessage)
+
+    def countUsers(self, message, afterHandler):
+        userCount = self._connection.userController.countUsers()
+        self._bot.send_message(message.chat.id, userCount)
+        afterHandler(message)
